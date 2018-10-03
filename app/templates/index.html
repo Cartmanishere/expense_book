@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ current_user.username }}!</h1>
+    <hr />
+    {% if records %}
+        <p>Your expense records are as follows:</p>
+        <table style="width:100%">
+            <tr>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Desc</th>
+                <th>Date</th>
+            </tr>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.category }}</td>
+                <td>{{ record.amount }}</td>
+                <td>{{ record.desc }}</td>
+                <td>{{ record.timestamp }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>You have no expense records so far. <a href="{{ url_for('add_record') }}">Add one?</a></p>
+    {% endif %}
+{% endblock %}
