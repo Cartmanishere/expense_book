@@ -1,0 +1,32 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - ExpenseBook</title>
+      {% else %}
+      <title>Welcome to ExpenseBook</title>
+      {% endif %}
+    </head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+        }
+    </style>
+    <body>
+        <div>
+            ExpenseBook:
+            <a href="{{ url_for('index') }}">Home</a>
+            {% if current_user.is_anonymous %}
+                <a href="{{ url_for('login') }}">Login</a>
+            {% else %}
+                <a href="{{ url_for('add_record') }}">Add Record</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

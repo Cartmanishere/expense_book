@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from steelcoders.com/alpha/v1.2/ui-cards.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Feb 2017 06:12:19 GMT -->
+<head>
+
+        <!-- Title -->
+        <title>Alpha | Responsive Admin Dashboard Template</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta charset="UTF-8">
+        <meta name="description" content="Responsive Admin Dashboard Template" />
+        <meta name="keywords" content="admin,dashboard" />
+        <meta name="author" content="Steelcoders" />
+
+        <!-- Styles -->
+        <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
+
+
+        <!-- Theme Styles -->
+        <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+
+        <style>
+
+        .height_auto{
+          height: auto !important;
+        }
+        </style>
+
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script type="text/javascript">
+
+  $('.carousel.carousel-slider').carousel({fullWidth: true});
+
+            // Next slide
+            // $('.carousel').carousel('next');
+            // $('.carousel').carousel('next', 3); // Move next n times.
+            //
+            // // Previous slide
+            // $('.carousel').carousel('prev');
+            // $('.carousel').carousel('prev', 4); // Move prev n times.
+            //
+            // // Set to nth slide
+            // $('.carousel').carousel('set', 4);
+            //
+            // // Destroy carousel
+            // $('.carousel').carousel('destroy');
+            //
+            // $(document).ready(function(){
+            //     $('.parallax').parallax();
+            // });
+            //
+            //  $('.carousel.carousel-slider').carousel({fullWidth: true});
+        </script>
+
+        <style type="text/css">
+            .parallax-container {
+                height: 500px;
+            }
+
+            .pratyaa{
+                width:100%;
+                height: 30em !important;
+                position: relative;
+                top: 2em;
+                border: 10px solid red;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="loader-bg"></div>
+        <div class="loader">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-spinner-teal lighten-1">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mn-content ">
+            <header class="mn-header ">
+                <nav class="cyan darken-1">
+                    <div class="nav-wrapper row">
+                        <!-- <section class="material-design-hamburger navigation-toggle">
+                            <a href="#" data-activates="slide-out" class="button-collapse show-on-large material-design-hamburger__icon">
+                                <span class="material-design-hamburger__layer"></span>
+                            </a>
+                        </section> -->
+                        <div class="header-title col s3">
+                            <span class="chapter-title">MaidEasy.com</span>
+                        </div>
+                        <form class="left search col s6 hide-on-small-and-down">
+                            <div class="input-field">
+                                <input id="search" type="search" placeholder="Search" autocomplete="off">
+                                <label for="search"><i class="material-icons search-icon">search</i></label>
+                            </div>
+                            <a href="javascript: void(0)" class="close-search"><i class="material-icons">close</i></a>
+                        </form>
+
+                        <div class="col s2 offset-s1">
+                        <a class="waves-effect waves-light btn">LogIn</a>
+
+                        <a class="waves-effect waves-light btn">SignUp</a>
+                        </div>
+
+
+                    </div>
+
+                </nav>
+            </header>
+
+
+
+            <main class="mn-inner">
+
+
+
+
+                <!-- <div class="col s10 offset-s1">
+                    <div class=" ">
+                        <div class="">
+
+                             <div class="carousel carousel-slider center" data-indicators="true">
+
+                                 <div class="carousel-item red  white-text" href="#one!">
+                                     <img src="assets/images/f1.jpg">
+                                 </div>
+                                 <div class="carousel-item teal  white-text" href="#two!">
+
+                                     <img src="assets/images/f2.jpg">
+                                 </div>
+                                 <div class="carousel-item  white-text" href="#three!">
+                                     <img src="assets/images/f3.jpg">
+                                 </div>
+                                 <div class="carousel-item  white-text" href="#four!">
+                                     <img src="assets/images/f4.jpg">
+                                 </div>
+                                 <div class="carousel-item  white-text" href="#four!">
+
+                                     <img src="assets/images/f5.jpg">
+
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="col s10 offset-s1">
+                    <div class=" ">
+                        <div class="">
+                            <!-- <span class="card-title">Example</span> -->
+                             <div class="carousel carousel-slider center" style="max-height:510px; max-width:1794px;" data-indicators="true">
+
+                                 <div class="carousel-item red  white-text" href="#one!">
+                                     <img src="assets/images/f1.jpg">
+                                 </div>
+                                 <div class="carousel-item teal  white-text" href="#two!">
+
+                                     <img src="assets/images/f2.jpg">
+                                 </div>
+                                 <div class="carousel-item  white-text" href="#three!">
+                                     <img src="assets/images/f3.jpg">
+                                 </div>
+                                 <div class="carousel-item  white-text" href="#four!">
+                                     <img src="assets/images/f4.jpg">
+                                 </div>
+                                 <div class="carousel-item  white-text" href="#four!">
+
+                                     <img src="assets/images/f5.jpg">
+
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+<!--
+                {% for maid in maids %}
+
+                    <div class="card small">
+                        <div class="card-image">
+                            {% if maid.uploads.passport_size.is_there %}
+                                <img src="{{ maid.uploads.passport_size.url }}" alt="">
+                            {% endif %}
+                            <span class="card-title">{{ maid.general_profile.name }}</span>
+                        </div>
+                        <div class="card-content">
+                            <p>
+                            Age:<strong>{{ maid.general_profile.age }}</strong><br>
+
+                            {% for i in maid.job_profile.job_experience.all %}
+
+                                From:<strong>{{ i.from_year }}</strong>, To: <strong>{{ i.to_year }}</strong>, Organisation:{{ i.organisation }}<br>
+
+                            {% endfor %}
+
+                            </p>
+
+                        </div>
+                        <div class="card-action">
+                            <a href="{% url 'view_maid' maid.id %}">View Profile</a>
+                        </div>
+                    </div>
+
+                {% endfor %} -->
+
+
+                <div class="row" style="margin: 2% 0 0 0;">
+                  <div class="col s10 m10 offset-s1 offset-m1">
+
+                  <div class="row">
+
+
+
+                    <div class="col s12 m3">
+
+
+                        <div class="card small">
+                            <div class="card-image">
+                                <img src="assets/images/card-image.jpg" alt="">
+                                <span class="card-title">Image Card</span>
+                            </div>
+                            <div class="card-content">
+                                <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">View More Details</a>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col s12 m3">
+
+
+                          <div class="card small">
+                              <div class="card-image">
+                                  <img src="assets/images/card-image.jpg" alt="">
+                                  <span class="card-title">Image Card</span>
+                              </div>
+                              <div class="card-content">
+                                  <p>I am a very simple card. I am good at containing small bits of information.
+                                      I am convenient because I require little markup to use effectively.</p>
+                              </div>
+                              <div class="card-action">
+                                  <a href="#">View More Details</a>
+                              </div>
+                          </div>
+                        </div>
+
+                        <div class="col s12 m3">
+
+
+                            <div class="card small">
+                                <div class="card-image">
+                                    <img src="assets/images/card-image.jpg" alt="">
+                                    <span class="card-title">Image Card</span>
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                        I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#">View More Details</a>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col s12 m3">
+
+
+                              <div class="card small">
+                                  <div class="card-image">
+                                      <img src="assets/images/card-image.jpg" alt="">
+                                      <span class="card-title">Image Card</span>
+                                  </div>
+                                  <div class="card-content">
+                                      <p>I am a very simple card. I am good at containing small bits of information.
+                                          I am convenient because I require little markup to use effectively.</p>
+                                  </div>
+                                  <div class="card-action">
+                                      <a href="#">View More Details</a>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <div class="col s12 m3">
+
+
+                                <div class="card small">
+                                    <div class="card-image">
+                                        <img src="assets/images/card-image.jpg" alt="">
+                                        <span class="card-title">Image Card</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>I am a very simple card. I am good at containing small bits of information.
+                                            I am convenient because I require little markup to use effectively.</p>
+                                    </div>
+                                    <div class="card-action">
+                                        <a href="#">View More Details</a>
+                                    </div>
+                                </div>
+                              </div>
+
+                              <div class="col s12 m3">
+
+
+                                  <div class="card small">
+                                      <div class="card-image">
+                                          <img src="assets/images/card-image.jpg" alt="">
+                                          <span class="card-title">Image Card</span>
+                                      </div>
+                                      <div class="card-content">
+                                          <p>I am a very simple card. I am good at containing small bits of information.
+                                              I am convenient because I require little markup to use effectively.</p>
+                                      </div>
+                                      <div class="card-action">
+                                          <a href="#">View More Details</a>
+                                      </div>
+                                  </div>
+                                </div>
+
+                                <div class="col s12 m3">
+
+
+                                    <div class="card small">
+                                        <div class="card-image">
+                                            <img src="assets/images/card-image.jpg" alt="">
+                                            <span class="card-title">Image Card</span>
+                                        </div>
+                                        <div class="card-content">
+                                            <p>I am a very simple card. I am good at containing small bits of information.
+                                                I am convenient because I require little markup to use effectively.</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a href="#">View More Details</a>
+                                        </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col s12 m3">
+
+
+                                      <div class="card small">
+                                          <div class="card-image">
+                                              <img src="assets/images/card-image.jpg" alt="">
+                                              <span class="card-title">Image Card</span>
+                                          </div>
+                                          <div class="card-content">
+                                              <p>I am a very simple card. I am good at containing small bits of information.
+                                                  I am convenient because I require little markup to use effectively.</p>
+                                          </div>
+                                          <div class="card-action">
+                                              <a href="#">View More Details</a>
+                                          </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="col s12 m3">
+
+
+                                        <div class="card small">
+                                            <div class="card-image">
+                                                <img src="assets/images/card-image.jpg" alt="">
+                                                <span class="card-title">Image Card</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>I am a very simple card. I am good at containing small bits of information.
+                                                    I am convenient because I require little markup to use effectively.</p>
+                                            </div>
+                                            <div class="card-action">
+                                                <a href="#">View More Details</a>
+                                            </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col s12 m3">
+
+
+                                          <div class="card small">
+                                              <div class="card-image">
+                                                  <img src="assets/images/card-image.jpg" alt="">
+                                                  <span class="card-title">Image Card</span>
+                                              </div>
+                                              <div class="card-content">
+                                                  <p>I am a very simple card. I am good at containing small bits of information.
+                                                      I am convenient because I require little markup to use effectively.</p>
+                                              </div>
+                                              <div class="card-action">
+                                                  <a href="#">View More Details</a>
+                                              </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="col s12 m3">
+
+
+                                            <div class="card small">
+                                                <div class="card-image">
+                                                    <img src="assets/images/card-image.jpg" alt="">
+                                                    <span class="card-title">Image Card</span>
+                                                </div>
+                                                <div class="card-content">
+                                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                                        I am convenient because I require little markup to use effectively.</p>
+                                                </div>
+                                                <div class="card-action">
+                                                    <a href="#">View More Details</a>
+                                                </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="col s12 m3">
+
+
+                                              <div class="card small">
+                                                  <div class="card-image">
+                                                      <img src="assets/images/card-image.jpg" alt="">
+                                                      <span class="card-title">Image Card</span>
+                                                  </div>
+                                                  <div class="card-content">
+                                                      <p>I am a very simple card. I am good at containing small bits of information.
+                                                          I am convenient because I require little markup to use effectively.</p>
+                                                  </div>
+                                                  <div class="card-action">
+                                                      <a href="#">View More Details</a>
+                                                  </div>
+                                              </div>
+                                            </div>
+
+                    </div>
+                    </div>
+                    </div>
+
+
+                    <div class="row">
+                         <!-- <div class="col m2 offset-m5">
+                           <button class="btn btn-large waves-effect waves-light" type="submit" name="action">View More Profiles&nbsp;&nbsp;&nbsp;&nbsp;
+                               <i class="material-icons right">send</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                             </button>
+                         </div> -->
+
+                         <ul class="pagination col m2 offset-m5">
+                           <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                           <li class="active"><a href="#!">1</a></li>
+                           <li class="waves-effect"><a href="#!">2</a></li>
+                           <li class="waves-effect"><a href="#!">3</a></li>
+                           <li class="waves-effect"><a href="#!">4</a></li>
+                           <li class="waves-effect"><a href="#!">5</a></li>
+                           <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                         </ul>
+
+                       </div>
+
+
+ <div class="card ">
+                 <div class="row">
+                   <div class="col s12 m8 offset-m2">
+
+                     <h2 class="card-title" style="text-align: center;
+font-weight: bold;
+font-size: xx-large;">Our Recruiters</h2>
+
+                       <div class="row">
+
+                         <div class="col s6 m2">
+                           <div class="card small height_auto">
+
+                             <div class="card-image">
+                               <img src="http://ZoEasy.co/img/1.png">
+
+                             </div>
+
+                           </div>
+                       </div>
+
+                       <div class="col s6 m2">
+                         <div class="card small height_auto">
+
+                           <div class="card-image">
+                             <img src="http://ZoEasy.co/img/2.png">
+
+                           </div>
+
+                         </div>
+                     </div>
+
+                     <div class="col s6 m2">
+                       <div class="card small height_auto">
+
+                         <div class="card-image">
+                           <img src="http://ZoEasy.co/img/3.png">
+
+                         </div>
+
+                       </div>
+                   </div>
+
+                   <div class="col s6 m2">
+                     <div class="card small height_auto">
+
+                       <div class="card-image">
+                         <img src="http://ZoEasy.co/img/4.png">
+
+                       </div>
+
+                     </div>
+                 </div>
+
+                 <div class="col s6 m2">
+                   <div class="card small height_auto">
+
+                     <div class="card-image">
+                       <img src="http://ZoEasy.co/img/5.png">
+
+                     </div>
+
+                   </div>
+               </div>
+
+               <div class="col s6 m2">
+                 <div class="card small height_auto">
+
+                   <div class="card-image">
+                     <img src="http://ZoEasy.co/img/6.png">
+
+                   </div>
+
+                 </div>
+             </div>
+
+                     </div>
+                     </div>
+
+
+     </div>
+
+
+
+            </main>
+
+        </div>
+
+
+
+
+
+        <footer class="page-footer" style="height: auto !important;">
+          <div class="container">
+            <div class="row">
+              <div class="col m6 s12">
+                <h5 class="white-text">About MaidEasy</h5>
+                <p class="grey-text text-lighten-4">
+                  MaidEasy.com is the UAE's first online platform which matches employers with their ideal domestic and blue collar workers (and vice versa) in the most convenient, transparent and ethical manner. Our unique and customized services ensure blue collar candidates find their dream job and employers discover the right fit for their companies.
+                </p>
+              </div>
+
+
+              <div class="col m3 s6">
+                <h5 class="white-text">Quick Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="404.html" target="_blank">About Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="404.html" target="_blank">Our Team</a></li>
+                  <li><a class="grey-text text-lighten-3" href="404.html" target="_blank">Contact us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="404.html" target="_blank">Authorized Agent List</a></li>
+                </ul>
+              </div>
+
+
+              <div class="col m3 s6">
+                <h5 class="white-text">Connect Us</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://www.facebook.com">Facebook</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://twitter.com">Twitter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.instagram.com">Instagram</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://in.linkedin.com/">LinkedIn</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright Reserved With MaidEasy Pvt.Ltd.
+            </div>
+          </div>
+        </footer>
+
+        <!-- Javascripts -->
+        <script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
+        <script src="assets/plugins/materialize/js/materialize.min.js"></script>
+        <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
+        <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+        <script src="assets/js/alpha.min.js"></script>
+        <script src="assets/js/pages/ui-carousel.js"></script>
+
+    </body>
+
+<!-- Mirrored from steelcoders.com/alpha/v1.2/ui-cards.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Feb 2017 06:14:48 GMT -->
+</html>

@@ -2,7 +2,6 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, FloatField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
 from app.models import User
-from flask_login import current_user
 
 class LoginForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired()])
@@ -28,7 +27,7 @@ class RecordForm(FlaskForm):
     amount = FloatField('Amount', validators=[DataRequired()])
     category = StringField('Category')
     desc = StringField('Description')
-    submit = SubmitField('Register')
+    submit = StringField('Register')
 
     def validate_amount(self, amount):
         if amount.data < 0.0: # This condition will also be strictly enforced client side. But to be safe...

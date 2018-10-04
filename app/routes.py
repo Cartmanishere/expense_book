@@ -6,15 +6,27 @@ from app.models import User, Record
 from flask_login import login_required
 from flask import request
 from werkzeug.urls import url_parse
+from dateutil import tz, parser
+from_zone = tz.tzutc()
+to_zone = tz.tzlocal()
+
 
 @app.route('/')
 @app.route('/index')
 @login_required
 def index():
     all_records = Record.query.filter_by(user=current_user).all()
+    # Convert datetimes
+    for record in all_records:
+        utc = record.timestamp
+        utc = utc.replace(tzinfo=from_zone)
+        local = utc.astimezone(to_zone)
+        record.timestamp = local.strftime('at %H:%M on %d/%m/%Y')
+
     if len(all_records) == 0:
         all_records = None
     return render_template('index.html', title='Home', user=current_user, records=all_records)
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -25,7 +37,7 @@ def login():
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user is None or not user.check_password(form.password.data):
-            flash('Invalid username or password')
+            flash('Invalid username or password', 'error')
             return redirect(url_for('login'))
 
         login_user(user, remember=form.remember_me.data)
@@ -53,7 +65,8 @@ def register():
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
-        flash('Congratulations, you are now a registered user!')
+        flash('Congratulations, you are now a registered user!', 'success')
+
         return redirect(url_for('login'))
 
     return render_template('register.html', title='Register', form=form)
@@ -67,7 +80,10 @@ def add_record():
         record = Record(amount=form.amount.data, desc=form.desc.data, category=form.category.data, user=current_user)
         db.session.add(record)
         db.session.commit()
-        flash('Expense added in your expense book!')
+        flash('Expense added in your expense book!', 'success')
+        if 'another' in form.submit.data.lower():
+            return redirect(url_for('add_record'))
+
         return redirect(url_for('index'))
 
     return render_template('add_record.html', title='Add Record', form=form)
